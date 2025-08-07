@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* UP Hotel Agency inspired palette */
+    --background: 180 20% 95%;
+    --foreground: 180 30% 15%;
+
+    --card: 180 15% 92%;
+    --card-foreground: 180 30% 15%;
+
+    --popover: 180 15% 95%;
+    --popover-foreground: 180 30% 15%;
+
+    /* Teal primary inspired by original */
+    --primary: 180 40% 25%;
+    --primary-foreground: 180 15% 95%;
+
+    --secondary: 180 25% 35%;
+    --secondary-foreground: 180 15% 95%;
+
+    --muted: 180 20% 85%;
+    --muted-foreground: 180 15% 45%;
+
+    --accent: 180 35% 30%;
+    --accent-foreground: 180 15% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 180 15% 95%;
+
+    --border: 180 20% 80%;
+    --input: 180 20% 85%;
+    --ring: 180 40% 25%;
+
+    /* Hero specific colors */
+    --hero-bg: 180 40% 20%;
+    --hero-overlay: 180 60% 15%;
+    --hero-text: 180 15% 85%;
+    --hero-accent: 180 25% 65%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 180 40% 8%;
+    --foreground: 180 15% 90%;
+
+    --card: 180 40% 12%;
+    --card-foreground: 180 15% 90%;
+
+    --popover: 180 40% 10%;
+    --popover-foreground: 180 15% 90%;
+
+    --primary: 180 15% 85%;
+    --primary-foreground: 180 40% 15%;
+
+    --secondary: 180 30% 20%;
+    --secondary-foreground: 180 15% 90%;
+
+    --muted: 180 30% 18%;
+    --muted-foreground: 180 15% 65%;
+
+    --accent: 180 30% 22%;
+    --accent-foreground: 180 15% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 180 15% 90%;
+
+    --border: 180 30% 20%;
+    --input: 180 30% 18%;
+    --ring: 180 25% 75%;
+
+    /* Hero dark mode */
+    --hero-bg: 180 40% 8%;
+    --hero-overlay: 180 50% 5%;
+    --hero-text: 180 15% 90%;
+    --hero-accent: 180 25% 70%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Full viewport height for mobile browsers */
+  .hero-height {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+
+  /* Elegant serif for headings */
+  .hero-text {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
